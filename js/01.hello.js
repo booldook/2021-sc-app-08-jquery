@@ -1,10 +1,8 @@
-var jQuery = function(el) {
-	return document.querySelectorAll(el);
-}
+var img = document.getElementById('img');
+var $img = $('#img');
 
-jQuery.prototype.hide = function () {
-	
-}
-
+console.log(  img.src  );
+console.log(  $(img).attr('src')  );
+console.log(  $(img)[0].src  );
 
 
