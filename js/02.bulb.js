@@ -18,12 +18,18 @@ for(var i=0; i<document.querySelectorAll('.bt-on').length; i++) {
 
 
 
-// ES5/ES6/jQuery 선택자
-// document.getElementById('idName') -> html
-// document.getElementsByClassName('className') -> Array[html, html]
-// document.getElementsByTagName('tagName') -> Array[html, html]
+/*
+ES5/ES6/jQuery 선택자
+document.getElementById('idName') -> html
+document.getElementsByClassName('className') -> Array[html, html]
+document.getElementsByTagName('tagName') -> Array[html, html]
+document.querySelector('.w100') -> html
+document.querySelectorAll('.w100') -> Array[html, html]
+$('.w100') -> jQuery
 
-// document.querySelector('.w100') -> html
-// document.querySelectorAll('.w100') -> Array[html, html]
+document.getElementById('a').getElementsByTagName('ul')[0].getElementsByTagName('li')[1].innerHTML;
+$('#a li:nth-child(2)')[0].innerHTML;
+document.querySelectorAll('#a li')[1].innerHTML;
+*/
 
-// $('.w100') -> jQuery
+
