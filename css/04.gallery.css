@@ -1,8 +1,28 @@
 .wrapper {max-width: 1200px; margin: 50px auto; overflow: hidden;}
-.prd-wrap {display: flex; flex-wrap: wrap; width: 101%;}
-.prd-wrap .prd {width: 23%; margin: 1%; border: 1px solid #ddd;}
-.prd-wrap .prd .imgs {margin-bottom: 12px;}
+.prd-wrap {display: flex; flex-wrap: wrap; width: 102%;}
+.prd-wrap .prd {width: 18%; margin: 0 2% 2% 0; border: 1px solid #ddd;}
+.prd-wrap .prd .imgs {margin-bottom: 12px; overflow: hidden;}
+.prd-wrap .prd .imgs img {transition: all .35s;}
+.prd-wrap .prd .imgs:hover img {transform: scale(1.2);}
 .prd-wrap .prd .conts {padding: 16px;}
 .prd-wrap .prd .conts .name {font-size: 24px; margin-bottom: 16px;}
 .prd-wrap .prd .conts .content {font-size: 15px; margin-bottom: 12px;}
 .prd-wrap .prd .conts .price {font-size: 20px; font-weight: bold;}
+
+@media screen and (max-width: 1199px) {
+	.prd-wrap .prd {width: 23%;}
+}
+
+@media screen and (max-width: 991px) {
+	.prd-wrap .prd {width: 31.3333%;}
+}
+
+@media screen and (max-width: 767px) {
+	.prd-wrap {width: 103%;}
+	.prd-wrap .prd {width: 47%; margin: 0 3% 3% 0;}
+}
+
+@media screen and (max-width: 575px) {
+	.prd-wrap {width: 100%;}
+	.prd-wrap .prd {width: 100%; margin: 0 0 3% 0;}
+}
