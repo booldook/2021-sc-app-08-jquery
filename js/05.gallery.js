@@ -65,6 +65,7 @@ var products = [
 ];
 
 $(document).ready(function() {
+
 	for(var i=0, html; i<products.length; i++) {
 		html  = '<li class="prd">';
 		html += '	<div class="imgs">';
@@ -76,8 +77,14 @@ $(document).ready(function() {
 		html += '		<div class="price">$'+products[i].price+'</div>';
 		html += '	</div>';
 		html += '</li>';
-		$('.prd-wrap').append(html);
+		$(html).appendTo('.prd-wrap').find('img').click(function(){
+			var src = $(this).attr('src');
+			$('.modal-wrap img').attr('src', src);
+			$('.modal-wrapper').stop().fadeIn(800);
+		});
 	}
+
+	/*
 	// .prd 생성 완료
 	$('.prd img').click(function(){
 		var src = $(this).attr('src'); // this.src; Getter
@@ -86,6 +93,8 @@ $(document).ready(function() {
 		// $('.modal-wrapper').css('display'); //this.style.display; Getter
 		$('.modal-wrapper').stop().fadeIn(800);
 	});
+	*/
+
 	$('.modal-wrapper .bt-close').click(function() {
 		// $('.modal-wrapper').css('display', 'none');
 		$('.modal-wrapper').stop().fadeOut(800);

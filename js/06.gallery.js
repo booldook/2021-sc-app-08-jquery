@@ -29,8 +29,7 @@ $('.list-wrap .thumb').click(function() {
 // 2차 버전
 $('.list-wrap .thumb').click(function() {
 	var html = '<div class="hover"><img src="'+$(this).attr('src')+'" class="w100"></div>';
-	$('.stage-wrap').append(html);
-	$('.stage-wrap .hover').stop().hide().fadeIn(1000, function() {
+	$(html).appendTo('.stage-wrap').stop().hide().fadeIn(1000, function() {
 		$('.stage-wrap .big').attr('src', $(this).find('img').attr('src'))
 		$(this).remove();
 	});
