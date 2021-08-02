@@ -1,3 +1,4 @@
+// AJAX(Asyncronous Javascript And XML)
 var products = [
 	{
 		name: 'Good Product1',
@@ -60,4 +61,17 @@ var products = [
 		price: 122.99,
 		content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur accusantium, eum earum mollitia neque, vel est itaque placeat laborum distinctio ex ab expedita sapiente ea unde atque, nesciunt sed praesentium!',
 	}, 
-]
+];
+
+
+console.log( products );
+console.log( products[1] );
+console.log( products[1].name );
+console.log( products[1].src );
+console.log( products[1].price );
+
+// JAVA - Jackson/Gson
+var json = JSON.stringify(products); // js Object -> json
+var jsObj = JSON.parse(json); // json -> js Object
+console.log( json );
+console.log( jsObj );
