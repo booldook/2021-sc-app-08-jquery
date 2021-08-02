@@ -74,3 +74,25 @@ var json = JSON.stringify(products); // js Object -> json
 var jsObj = JSON.parse(json); // json -> js Object
 // console.log( json );
 // console.log( jsObj );
+
+(function init() {
+	var cnt = products.length; // 12
+	var html = '';
+	var wrap = document.getElementsByClassName('prd-wrap')[0];
+	for(var i=0; i<cnt; i++) {
+		html  = '<li class="prd">';
+		html += '<div class="imgs">';
+		html += '<img src="'+products[i].src+'" class="w100">';
+		html += '</div>';
+		html += '<div class="conts">';
+		html += '<h2 class="name">'+products[i].name+'</h2>';
+		html += '<p class="content">'+products[i].content+'</p>';
+		html += '<div class="price">$'+products[i].price+'</div>';
+		html += '</div>';
+		html += '</li>';
+		// console.log(html);
+		wrap.innerHTML += html;
+	}
+
+
+})(); // IIFE(즉시실행함수)
