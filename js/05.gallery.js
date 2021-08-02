@@ -65,8 +65,7 @@ var products = [
 ];
 
 $(document).ready(function() {
-	var cnt = products.length;
-	for(var i=0, html; i<cnt; i++) {
+	for(var i=0, html; i<products.length; i++) {
 		html  = '<li class="prd">';
 		html += '	<div class="imgs">';
 		html += '		<img src="'+products[i].src+'" class="w100">';
@@ -77,18 +76,28 @@ $(document).ready(function() {
 		html += '		<div class="price">$'+products[i].price+'</div>';
 		html += '	</div>';
 		html += '</li>';
-		// document.getElementsByClassName('prd-wrap')[0].innerHTML += html;
-		// $('.prd-wrap')[0].innerHTML += html;
-		// $('.prd-wrap').html(); // $('.prd-wrap')[0].innerHTML; (Getter)
-		// $('.prd-wrap').html(html); // $('.prd-wrap')[0].innerHTML = html; (Setter)
-		// $('.prd-wrap').html( $('.prd-wrap').html() + html ); // $('.prd-wrap')[0].innerHTML += html;
-		// $('.prd-wrap').append(html); // $('.prd-wrap')[0].innerHTML += html;
 		$('.prd-wrap').append(html);
 	}
-	console.log( $('.prd').length );
+	// .prd 생성 완료
+	$('.prd img').click(function(){
+		var src = $(this).attr('src'); // this.src; Getter
+		$('.modal-wrap img').attr('src', src); // this.src = src; Setter
+		// $('.modal-wrapper').css('display', 'flex'); //this.style.display = 'flex'; Setter
+		// $('.modal-wrapper').css('display'); //this.style.display; Getter
+		$('.modal-wrapper').stop().fadeIn(800);
+	});
+	$('.modal-wrapper .bt-close').click(function() {
+		// $('.modal-wrapper').css('display', 'none');
+		$('.modal-wrapper').stop().fadeOut(800);
+	});
 });
 
-
+// document.getElementsByClassName('prd-wrap')[0].innerHTML += html;
+// $('.prd-wrap')[0].innerHTML += html;
+// $('.prd-wrap').html(); // $('.prd-wrap')[0].innerHTML; (Getter)
+// $('.prd-wrap').html(html); // $('.prd-wrap')[0].innerHTML = html; (Setter)
+// $('.prd-wrap').html( $('.prd-wrap').html() + html ); // $('.prd-wrap')[0].innerHTML += html;
+// $('.prd-wrap').append(html); // $('.prd-wrap')[0].innerHTML += html;
 // var modal = document.getElementsByClassName('modal-wrapper')[0];
 // var img = modal.getElementsByTagName('img')[0];
 // $('.modal-wrapper img')

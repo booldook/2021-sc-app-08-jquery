@@ -93,6 +93,11 @@ var jsObj = JSON.parse(json); // json -> js Object
 		// console.log(html);
 		wrap.innerHTML += html;
 	}
+	/* for(var i=0; i<document.getElementsByClassName('prd').length; i++) {
+		document.getElementsByClassName('prd')[i].getElementsByTagName('img')[0].addEventListener('click', function() {
+			console.log(this);
+		});
+	} */
 })(); // IIFE(즉시실행함수)
 
 function openModal(id) {
