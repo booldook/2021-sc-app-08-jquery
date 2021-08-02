@@ -82,7 +82,7 @@ var jsObj = JSON.parse(json); // json -> js Object
 	for(var i=0; i<cnt; i++) {
 		html  = '<li class="prd">';
 		html += '<div class="imgs">';
-		html += '<img src="'+products[i].src+'" class="w100">';
+		html += '<img src="'+products[i].src+'" class="w100" onclick="openModal('+i+');">';
 		html += '</div>';
 		html += '<div class="conts">';
 		html += '<h2 class="name">'+products[i].name+'</h2>';
@@ -94,3 +94,18 @@ var jsObj = JSON.parse(json); // json -> js Object
 		wrap.innerHTML += html;
 	}
 })(); // IIFE(즉시실행함수)
+
+function openModal(id) {
+	// 1. 모달창을 연다.
+	// 2. 이미지를 바꿔준다.
+	var modal = document.getElementsByClassName('modal-wrapper')[0];
+	var img = modal.getElementsByTagName('img')[0];
+	img.src = products[id].src;
+	modal.style.display = 'flex';
+}
+
+function closeModal() {
+	// .bt-close를 클릭하면 모달창을 닫는다.
+	var modal = document.getElementsByClassName('modal-wrapper')[0];
+	modal.style.display = 'none';
+}
