@@ -30,9 +30,12 @@ $('.list-wrap .thumb').click(function() {
 $('.list-wrap .thumb').click(function() {
 	var html = '<div class="hover"><img src="'+$(this).attr('src')+'" class="w100"></div>';
 	$('.stage-wrap').append(html);
-	$('.stage-wrap .hover').stop().hide();
-	$('.stage-wrap .hover').stop().fadeIn(1000);
+	$('.stage-wrap .hover').stop().hide().fadeIn(1000, function() {
+		$('.stage-wrap .big').attr('src', $(this).find('img').attr('src'))
+		$(this).remove();
+	});
 	$('.stage-wrap .name').html($(this).attr('alt'));
 	$('.list-wrap .list').removeClass('active');
 	$(this).parent().addClass('active');
 });
+
