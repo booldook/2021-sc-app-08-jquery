@@ -31,3 +31,5 @@ $('.header-wrapper .navi').on('mouseenter', function() {
 $('.header-wrapper .navi').on('mouseleave', function() {
 	$(this).find('.sub-wp').stop().slideUp(200);
 })
+
+console.log( document.getElementById('h1').innerHTML += "마바사아" );
