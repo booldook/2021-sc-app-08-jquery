@@ -63,14 +63,14 @@ var products = [
 ];
 
 
-console.log( products );
-console.log( products[1] );
-console.log( products[1].name );
-console.log( products[1].src );
-console.log( products[1].price );
+// console.log( products );
+// console.log( products[1] );
+// console.log( products[1].name );
+// console.log( products[1].src );
+// console.log( products[1].price );
 
 // JAVA - Jackson/Gson
 var json = JSON.stringify(products); // js Object -> json
 var jsObj = JSON.parse(json); // json -> js Object
-console.log( json );
-console.log( jsObj );
+// console.log( json );
+// console.log( jsObj );
