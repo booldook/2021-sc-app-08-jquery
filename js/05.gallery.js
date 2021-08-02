@@ -67,7 +67,7 @@ var products = [
 $(document).ready(function() {
 	var cnt = products.length;
 	for(var i=0, html; i<cnt; i++) {
-		html  = '<li class="prd prd'+i+'">';
+		html  = '<li class="prd">';
 		html += '	<div class="imgs">';
 		html += '		<img src="'+products[i].src+'" class="w100">';
 		html += '	</div>';
@@ -85,4 +85,10 @@ $(document).ready(function() {
 		// $('.prd-wrap').append(html); // $('.prd-wrap')[0].innerHTML += html;
 		$('.prd-wrap').append(html);
 	}
+	console.log( $('.prd').length );
 });
+
+
+// var modal = document.getElementsByClassName('modal-wrapper')[0];
+// var img = modal.getElementsByTagName('img')[0];
+// $('.modal-wrapper img')
