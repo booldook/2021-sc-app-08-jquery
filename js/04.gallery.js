@@ -93,6 +93,4 @@ var jsObj = JSON.parse(json); // json -> js Object
 		// console.log(html);
 		wrap.innerHTML += html;
 	}
-
-
 })(); // IIFE(즉시실행함수)
