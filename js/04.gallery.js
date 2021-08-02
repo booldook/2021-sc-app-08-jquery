@@ -1,4 +1,3 @@
-// AJAX(Asyncronous Javascript And XML)
 var products = [
 	{
 		name: 'Good Product1',
