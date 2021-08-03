@@ -32,6 +32,8 @@ function onBtHide() {
 }
 
 
+
 /*********** 이벤트등록 ***********/
+setTimeout(createBox, 2000, '.stage'); // 1번만 실행
 $('.bt-show').click(onBtShow);
 $('.bt-hide').click(onBtHide);
